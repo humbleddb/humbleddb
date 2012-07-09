@@ -1,0 +1,18 @@
+{
+	"name": "humbleddb",
+	"description": "humbledDB is a simple readable file based NoSQL database for small data sets",
+	"version": "0.1",
+	"dependencies": {
+		"searchjs": "*",
+		"reloader": "*",
+		"express": "3.0",
+		"express-validator": "*",
+		"ejs": "*",
+		"marked": "*",
+		"console-trace": "*",
+		"mocha": "*",
+		"should": "*",
+		"sinon": "*",
+		"cover": "*"
+	}
+}

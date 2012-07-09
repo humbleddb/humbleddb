@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<!-- for search js -->
+		<script type="text/javascript" src="node_modules/searchjs/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="node_modules/searchjs/json2.js"></script>
+		<script type="text/javascript" src="node_modules/searchjs/lib/searchjs.js"></script>
+
+		<!-- for humbled db -->
+		<script type="text/javascript" src="lib/DB.js"></script>
+		<script type="text/javascript" src="lib/Html5LocalStorageStorage.js"></script>
+
+		<script type="text/javascript">
+			function runCode() {
+				try {
+					var code = $('#code').val();
+					console.debug('eval: ' + code);
+					var result = eval(code);
+					console.info('result: ' + result);
+				} catch (e) {
+					console.error('error: ' + e);
+					console.error(e);
+				}
+			}
+		</script>
+	</head>
+<body>
+
+<div style="width: 80%; margin: auto;">
+	Enter sourcecode:<br/>
+	<textarea id="code" style="width: 100%; height: 80%;">
+var db = new DB();
+
+db.save({'item1': 'yeah value 1'});
+db.save({'item2': 'yeah value 2'});
+
+db.find();
+db.count();
+	</textarea><br/>
+	<input type="button" value="Run" onclick="runCode();" />
+	(please open javascript console for the result -- only for now)
+</div>
+
+</body>
+</html>
